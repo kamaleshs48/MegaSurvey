@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Mobile Verify</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <form>
+    <p>We have send verification code at your mobile. Please Enter your verification code</p>
+    <ion-list>
+      <ion-item>
+
+        <ion-input type="tel"  maxlength="6"  [(ngModel)]="OTP" id="OTP" name="OTP" placeholder="verification code"></ion-input>
+      </ion-item>
+      <div class="form-links">
+
+        <button ion-button clear [disabled]="OTPCount==3" (click)="ResendOTP()">Resend OTP ?</button>
+
+      </div>
+      <div padding>
+        <button ion-button color="headerOld" block (click)="SubmitOTP()">Submit</button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

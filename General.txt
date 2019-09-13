@@ -1,0 +1,180 @@
+$ ionic generate 
+$ ionic generate component
+$ ionic generate directive
+$ ionic generate page
+$ ionic generate pipe
+$ ionic generate provider
+$ ionic generate tabs
+$ ionic generate component foo
+$ ionic generate page Login
+$ ionic generate page Detail --no-module
+$ ionic generate page About --constants
+$ ionic generate pipe MyFilterPipe
+
+ionic cordova build android --prod --release
+ionic cordova run android --device -l --debug
+
+ionic cordova run android --device
+
+https://codepen.io/Froelund/pen/BuiDz
+
+For Sharing 
+http://www.techexceed.com/ionic-3-beginner-how-to-add-social-sharing-using-ionic-native/ 
+
+For Google Map
+https://www.djamware.com/post/58f4da2080aca7414e78a638/step-by-step-tutorial-of-ionic-3-angular-4-and-google-maps-directions-service
+
+
+https://blog.khophi.co/optimize-ionic-2-app-production/
+
+TIPS
+https://www.toptal.com/ionic/most-common-ionic-development-mistakes
+
+For Icons
+https://www.flaticon.com/
+https://icons8.com/icon/19213/arrow-pointing-down
+
+http://pointdeveloper.com/change-versioncode-cordova-ionic-apps-android/
+
+
+Geolocation
+
+ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
+npm install --save @ionic-native/geolocation
+
+For Sharing
+ionic plugin add cordova-plugin-x-socialsharing
+npm install --save @ionic-native/social-sharing
+
+
+https://crosswalk-project.org/documentation/cordova.html
+
+Look For Focus
+https://competenepal.com/elastic-text-area-component-in-ionic-framework/
+
+https://ionicframework.com/docs/cli/cordova/build/
+
+
+http://shallowsky.com/blog/programming/cordova-create-signed-app.html
+
+get All COuntry
+https://restcountries.eu/rest/v2/all
+
+7696094884
+Atul
+
+Relese 
+cordova plugin remove phonegap-plugin-push
+
+Google Play Store
+
+https://play.google.com/apps/publish/?account=8890444605358397044#AppListPlace
+
+
+https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin
+
+
+$ ionic cordova plugin add cordova-plugin-network-information
+$ npm install --save @ionic-native/network
+--
+
+$ ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE"
+$ npm install --save @ionic-native/google-maps
+
+
+
+ionic plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=1033168708625-94d6dffhdi1j43qj4d03m9b0oh8arg7m.apps.googleusercontent.com
+
+
+
+868536791549-musg32effodckthhbvodeems48b6ggul.apps.googleusercontent.com
+
+
+com.googleusercontent.apps.868536791549-musg32effodckthhbvodeems48b6ggul
+
+
+ionic plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.868536791549-basnp7937pdkaga2g3f6hkjt5s0g1gq7
+
+cordova plugin remove cordova-plugin-googleplus
+
+
+https://devdactic.com/google-sign-in-ionic-firebase/
+
+O+SWav61GV6qpzHQcVtHDmSThvQ=     Fpr Local Testing
+6XMUwapRq9XvsnMhFBcuuuG0oY8=     Fr Google play store
+
+For Google Map
+Set Address
+https://stackoverflow.com/questions/8282026/how-to-limit-google-autocomplete-results-to-city-and-country-only
+
+
+
+For Current Address
+https://codeburst.io/native-google-maps-and-geolocation-ionic-fe635a00249d
+
+Google Map Route 
+http://jsfiddle.net/8xq4gd8y/15/
+https://www.djamware.com/post/5a48517280aca7059c142972/ionic-3-angular-5-firebase-and-google-maps-location-tracking
+
+
+http://www.c-sharpcorner.com/uploadfile/8911c4/how-to-draw-routes-and-calculate-route-time-and-distance-on/
+
+
+
+https://documentation.onesignal.com/v5.0/reference
+
+
+
+additionalData
+
+
+StateMaster
+LokSabhaMaster
+VidhanSabhaMaster
+WordMaster
+AreaCityMaster
+
+
+State
+LokSabha
+VidhanSabha
+Word
+Area
+
+https://github.com/dpa99c/cordova-sqlite-porter#example-usage-2
+
+http://masteringionic.com/blog/2018-01-23-importing-exporting-sqlite-data-for-ionic-framework-mobile-apps/
+
+
+
+
+
+Gender Divide by 6
+Your Gender is Male is right?
+Age Divide by 6
+Religion Divide by 6
+caste Divide by 6
+
+
+
+melamet-cream
+
+
+Age Grop
+Eduction 
+Profession
+
+
+UPDATE tbl_QuestionMaster SET Option6 =''
+UPDATE tbl_QuestionMaster SET Option7 =''
+UPDATE tbl_QuestionMaster SET Option8 =''
+UPDATE  tbl_QuestionMaster SET Option9 =''
+UPDATE  tbl_QuestionMaster SET Option10 =''
+
+UPDATE tbl_QuestionMaster SET Option6 ='Option6'
+UPDATE tbl_QuestionMaster SET Option7 ='Option7'
+UPDATE tbl_QuestionMaster SET Option8 ='Option8'
+UPDATE  tbl_QuestionMaster SET Option9 ='Option9'
+UPDATE  tbl_QuestionMaster SET Option10 ='Option10'
+
+

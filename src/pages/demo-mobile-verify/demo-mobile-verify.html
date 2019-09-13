@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Mobile Verify</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>Please enter your valid mobile No.</p>
+  <ion-item>
+    <ion-label floating>Mobile No</ion-label>
+    <ion-input type="tel" maxlength='10' [(ngModel)]="MobileNo"></ion-input>
+  </ion-item>
+  
+  <div padding>
+    <button ion-button color="headerOld" tappable  (click)="GetOTP()" block>Verify</button>
+  </div>
+
+
+</ion-content>

@@ -1,35 +1,68 @@
 <ion-header>
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Survey Assigned </ion-title>
 
-  <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 <ion-content>
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
-        <ion-avatar item-start>
-          <img [src]="item.profilePic" />
-        </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <p>{{item.about}}</p>
-        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-      </button>
+  <ion-card *ngFor="let k of SurveyList; let i=index">
+    <button block [disabled]="k.IsEnabled==0" style="background-color: white!important;width: 100%!important">
 
-      <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(item)">
-          {{ 'DELETE_BUTTON' | translate }}
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+      <ion-item (click)="FirstPage(k.ID,k.State_ID,k.Loksabha_ID,k.Vidhansabha_ID,k.WardBlock_ID,k.Survey_For,k.PresentLimit,k.MaxLimit,k.WardLevelName,k.PID,k.Balance,k.IsExpired,k.IsStart)"
+        style="width: 100%!important">
+        <ion-avatar item-start>
+          <img src="assets/img/survey.png" />
+        </ion-avatar>
+        <h1 center>{{k.Name}}</h1>
+        <p style="color: black" [innerHtml]="k.PresentLimit"></p>
+
+      </ion-item>
+
+    </button>
+  </ion-card>
+
+
+
+
+
+      <!--  <ion-card>
+        <ion-item>
+          <ion-avatar item-start style="width:15%!important;">
+            <img src="assets/img/survey.png" />
+          </ion-avatar>
+          <h2 center>Test INNSS</h2>
+         
+        </ion-item>
+      </ion-card>
+      <ion-card>
+          <ion-item>
+            <ion-avatar item-start style="width:15%!important;">
+              <img src="assets/img/survey.png" />
+            </ion-avatar>
+            <h2 center>Test INNSS</h2>
+           
+          </ion-item>
+        </ion-card>
+        <ion-card>
+            <ion-item>
+              <ion-avatar item-start style="width:15%!important;">
+                <img src="assets/img/survey.png" />
+              </ion-avatar>
+              <h1 center>Test INNSS</h1>
+      
+            </ion-item>
+          </ion-card> -->
+
+
+
+
+
+
+
+
+
 </ion-content>

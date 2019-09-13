@@ -29,7 +29,10 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  header:#457ddf,
+  C1: #b3d1ff,
+
 );
 
 
@@ -75,5 +78,8 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+ @import "roboto";
+@import "noto-sans"; 
+
+ 
+

@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ReligionSettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Select Party Name</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-item>
+    <ion-label>Survey Name</ion-label>
+    <ion-select [(ngModel)]="SurveyID" (ngModelChange)="BindParty(SurveyID)">
+      <ion-option [value]="gl.id" *ngFor="let gl of _SurveyList">{{gl.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let skill of _List; let i=index">
+
+      <ion-label>{{i+1}} &nbsp; &nbsp; &nbsp; {{skill.name}}</ion-label>
+
+      <ion-checkbox [(ngModel)]="_List[i].selected" item-start></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer padding>
+  <ion-toolbar>
+    <button ion-button color="primary" block (click)="Save()">Save</button>
+  </ion-toolbar>
+</ion-footer>

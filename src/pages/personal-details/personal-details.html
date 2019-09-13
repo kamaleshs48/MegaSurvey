@@ -1,0 +1,32 @@
+<ion-header color="header">
+
+  <ion-navbar color="header">
+    <ion-title>Your Details Please .....</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="Skip()">SKIP</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="Name" name="Name" (ionInput)="onKeyPress($event)" minlength="3" maxlength="20"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mobile No 1</ion-label>
+    <ion-input type="tel" [(ngModel)]="Mobile1" name="MobileNo1" maxlength="10"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mobile No 2 </ion-label>
+    <ion-input type="tel" [(ngModel)]="Mobile2" name="MobileNo2" maxlength="10"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="Email" name="Email"></ion-input>
+  </ion-item>
+  <br />
+  <button ion-button color="primary" block (click)="closeModal()">Submit</button>
+  <br />
+  <button ion-button color="primary" block [disabled]="true" (click)="Skip()">No Thanks</button>
+
+</ion-content>

@@ -8,10 +8,14 @@ import { IonicStorageModule, Storage } from '@ionic/storage';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
-import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
+import { SQLite } from '@ionic-native/sqlite';
+
+import { SQLitePorter } from '@ionic-native/sqlite-porter';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Network } from '@ionic-native/network';
+
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -20,17 +24,22 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 export function provideSettings(storage: Storage) {
-  /**
-   * The Settings provider takes a set of default settings for your app.
-   *
-   * You can add new settings options at any time. Once the settings are saved,
-   * these values will not overwrite the saved values (this can be done manually if desired).
-   */
+
   return new Settings(storage, {
     option1: true,
     option2: 'Ionitron J. Framework',
     option3: '3',
-    option4: 'Hello'
+    option4: 'Hello',
+    UID: '0',
+    UName: '',
+    Email: '',
+    Row_ID: '0',
+    username: '',
+    IsLoadData: 'F',
+    ServeyHistry: '',
+    QuestionViewType: 1,
+    Language_ID:6
+
   });
 }
 
@@ -48,8 +57,11 @@ export function provideSettings(storage: Storage) {
         deps: [HttpClient]
       }
     }),
-    IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicModule.forRoot(MyApp, { tabsPlacement: 'bottom', tabsHideOnSubPages: true, mode: 'md', }),
+    IonicStorageModule.forRoot({
+      name: '__MegaDB',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,14 +69,19 @@ export function provideSettings(storage: Storage) {
   ],
   providers: [
     Api,
-    Items,
+
     User,
     Camera,
     SplashScreen,
     StatusBar,
+    SQLite,
+    SQLitePorter,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+
+    Geolocation,
+    Network
   ]
 })
 export class AppModule { }

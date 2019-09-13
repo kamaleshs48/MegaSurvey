@@ -1,0 +1,63 @@
+<!--
+  Generated template for the SelectSurveyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Survey Data</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button color="primary" block (click)="GetSurveyData()">Get Survey Data</button>
+
+  <ion-list>
+
+
+    <!-- <ion-item ng-hide="isLoadData">
+    <h1>No data Found</h1>
+    </ion-item> -->
+    <!-- <h1>PresentLimit   : {{PresentLimit}}</h1>
+<h1>MaxLimit   : {{MaxLimit}}</h1> -->
+
+
+    <ion-item *ngFor="let k of SurveyList; let i=index">
+      <p>
+        <!--  <span>ID : {{k.RowID}}</span> -->
+        <br>GPSCoordinate : {{k.GPSCoordinate}}
+        <br> Date: {{k.SurveyDate}}
+        <br> Gender_ID : {{k.Gender_ID}}
+        <br> Age_Group_ID : {{k.Age_Group_ID}}
+        <br> Education_ID : {{k.Education_ID}}
+        <br> Profession_ID: {{k.Profession_ID}}
+        <br> Email: {{k.Email}}
+        <br> Name: {{k.Name}}
+        <br> Mobile1: {{k.Mobile1}}
+        <br> Mobile2: {{k.Mobile2}}
+        <br> Row_ID: {{k.RowID}}
+
+
+
+
+       
+        <!--  <br>Party:{{k.UserID}} -->
+      </p>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
+<ion-footer padding>
+  <ion-toolbar>
+    <button ion-button color="primary" block [disabled]="TData==0" (click)="PostDataToServer()">{{TData}} - Upload Data</button>
+  </ion-toolbar>
+</ion-footer>

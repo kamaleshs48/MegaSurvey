@@ -1,0 +1,45 @@
+page-survey1 {
+
+    .item-block
+    {
+        background-color:#ccffcc;
+        
+    }
+    .item-avatar  {     
+        width:100% !important;  
+        height : 100% !important; 
+    }
+    ion-avatar img1  {
+        width:100% !important;
+        height : 100% !important;
+        max-width: 100px !important;  //any size
+        max-height: 100px !important; //any size
+        margin-left: -14px!important;
+        }
+
+         .img1  {
+            width:100% !important;
+            height : 100% !important;
+            max-width: 100px !important;  //any size
+            max-height: 100px !important; //any size
+            margin-left: -14px!important;
+            }
+
+    .img2
+    {
+        width:100% !important;
+        height : 100% !important;
+        max-width: 100px !important;  //any size
+        max-height: 100px !important; //any size
+        margin-right: -24px!important;
+        padding-right: -20px!important;
+    }
+
+
+       /*  .item-md ion-avatar ion-img, .item-md ion-avatar img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 120px!important;
+            height: 120px!important;
+        } */
+}

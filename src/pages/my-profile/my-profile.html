@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Profile</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+ 
+    <ion-row>
+
+      <ion-col col-4 style="margin-top: -10px;">
+        <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files" (change)="processWebImage($event)" />
+        <img src="{{profilePic}}" (click)="getPicture()" style="border: 3px solid lightgreen;border-radius: 50%;">
+      </ion-col>
+      <ion-col col-6 text-center style="margin-top: 10px;">
+        <strong>{{Name}}</strong>
+      </ion-col>
+    </ion-row>
+    <hr style="background-color: lightgreen;">
+  
+  <div padding>
+
+    <form [formGroup]="authForm"  style="margin-top: -20px;">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>First Name<span style="color:red">*</span></ion-label>
+          <ion-input type="text" [(ngModel)]="u.FirstName" formControlName="FirstName" [attr.maxlength]="20" maxlength="20"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input type="text" [(ngModel)]="u.LastName" formControlName="LastName" [attr.maxlength]="20"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Mobile No<span style="color:red">*</span></ion-label>
+          <ion-input type="tel" [(ngModel)]="u.MobileNo" [disabled]="true" formControlName="MobileNo" [attr.maxlength]="10"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Alternate Mobile No</ion-label>
+          <ion-input type="tel" [(ngModel)]="u.AlternateMobileNo"  formControlName="AlternateMobileNo" [attr.maxlength]="10"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="u.Email" formControlName="Email" [attr.maxlength]="25"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Address</ion-label>
+          <ion-input type="textarea" [(ngModel)]="u.Address" formControlName="Address" [attr.maxlength]="100"></ion-input>
+        </ion-item>
+        
+        <div padding style="float: right">
+          <div class="form-links">
+ 
+            <button ion-button clear (click)="ChangePassword()">Change Password ?</button>
+          
+          </div>
+
+          
+        </div>
+       
+        <div padding>
+          <button ion-button color="primary" block [disabled]="!authForm.valid" (click)="ProfileUpdate()">Submit</button>
+        </div>
+      </ion-list>
+    </form>
+    
+  </div>
+</ion-content>

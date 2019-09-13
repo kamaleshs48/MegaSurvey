@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Update Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <form [formGroup]="authForm">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>First Name<span style="color:red">*</span></ion-label>
+          <ion-input type="text" [(ngModel)]="u.FirstName" formControlName="FirstName" [attr.maxlength]="20" maxlength="20"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input type="text" [(ngModel)]="u.LastName" formControlName="LastName" [attr.maxlength]="20"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Mobile No<span style="color:red">*</span></ion-label>
+          <ion-input type="tel" [(ngModel)]="u.Mobile1" [disabled]="true" formControlName="Mobile1" [attr.maxlength]="10"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Alternate Mobile No</ion-label>
+          <ion-input type="tel" [(ngModel)]="u.Mobile2" formControlName="Mobile2" [attr.maxlength]="10"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="u.Email" formControlName="Email" [attr.maxlength]="25"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Address</ion-label>
+          <ion-input type="text" [(ngModel)]="u.Address" formControlName="Address" [attr.maxlength]="25"></ion-input>
+        </ion-item>
+
+        <div padding>
+          <button ion-button color="primary" block [disabled]="!authForm.valid" (click)="doLogin()">Submit</button>
+        </div>
+      </ion-list>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+  </ion-card>
+</ion-content>

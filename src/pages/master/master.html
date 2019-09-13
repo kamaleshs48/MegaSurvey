@@ -1,0 +1,79 @@
+<!--
+  Generated template for the MasterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Master</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <!--  <button ion-button color="secondary" outer (click)="doLogin()">Load Data</button>
+  <button ion-button color="secondary" outer (click)="saveData()">Get State List</button> -->
+  <!--  <button ion-button color="secondary" (click)="getData()">getData</button>
+  
+  <button ion-button color="primary" (click)="GetState()">Get State</button>
+ -->
+  <ion-list>
+    <ion-card>
+      <ion-item (click)="doLogin()">
+        <ion-avatar item-start style="height:50px!important;">
+          <img src="assets/img/Load.png" style="height: 50px;width: 50px;" />
+        </ion-avatar>
+        <strong center>Import Data</strong>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item (click)="PostDataToServer()">
+        <ion-avatar item-start style="height: 50px!important;">
+          <img src="assets/img/upload.png" style="height: 50px;width: 50px;" />
+        </ion-avatar>
+        <strong>Upload Data</strong>
+      </ion-item>
+    </ion-card>
+   <!--  <ion-card>
+        <ion-item (click)="Test()">
+          <ion-avatar item-start style="height: 50px!important;">
+            <img src="assets/img/upload.png" style="height: 50px;width: 50px;" />
+          </ion-avatar>
+          <strong>Test</strong>
+        </ion-item>
+      </ion-card> -->
+  </ion-list>
+
+
+
+
+<!--   <ion-list>
+    <h1>Survey Name</h1>
+    <ion-item *ngFor="let expense of SurveyList; let i=index">
+      <p>
+        <span>{{expense.ID}}</span>
+
+        <br>
+        <br> Name: {{expense.Name}}
+      </p>
+    </ion-item>
+    <h1>Party List</h1>
+    <ion-item *ngFor="let k of PartyList; let i=index">
+      <p>
+        <span>{{k.ID}}</span>
+        <br>Survey_ID : {{k.Survey_ID}}
+        <br>PartyName : {{k.PartyName}}
+        <br> IconsName: {{k.IconsName}}
+      </p>
+    </ion-item>
+  </ion-list> -->
+
+
+
+</ion-content>

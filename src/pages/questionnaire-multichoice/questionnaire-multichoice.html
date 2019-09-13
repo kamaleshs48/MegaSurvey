@@ -1,0 +1,82 @@
+<ion-header color="header">
+  <ion-navbar color="header">
+    <ion-title>Questionnaire Multichoice - {{Question_Index}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">SKIP</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!--    <h1>
+              Are You Satisfied the work of the goverment of Arvind Kejriwal in Delhi ?
+          </h1>
+
+    <ion-card>
+      <ion-item>
+
+        <h2 center>Yes</h2>
+
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+
+        <h2 center>No</h2>
+
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item >
+
+        <h2 center>50 -50 </h2>
+
+      </ion-item>
+    </ion-card>
+    <ion-card>
+        <ion-item (click)="SaveGender(k.value,k.text)">
+
+          <h2 center>Don't Know </h2>
+
+        </ion-item>
+      </ion-card>
+  -->
+  <div padding class="c1">
+
+
+    <h3>
+      {{Question}}
+    </h3>
+    <div class="hr"> </div>
+    <h3>
+      {{OtherLanguage}}
+    </h3>
+  </div>
+
+  <div *ngFor="let k of _List; let i=index">
+    <ion-card *ngIf="_List[i].IsShow">
+      <ion-item>
+        <ion-label>
+          <h1 text-wrap style="color:red;padding-left: 20px">
+
+            {{_List[i].text}}
+          </h1>
+
+          <h1 text-wrap style="color:black;padding-left: 20px">
+            {{_List[i].OtherLanguage}}
+          </h1>
+
+
+        </ion-label>
+
+        <ion-checkbox [(ngModel)]="_List[i].selected" item-end></ion-checkbox>
+      </ion-item>
+    </ion-card>
+  </div>
+
+
+</ion-content>
+<ion-footer padding>
+  <ion-toolbar>
+    <button ion-button color="primary" block (click)="SaveGender()">Save & Next</button>
+  </ion-toolbar>
+</ion-footer>

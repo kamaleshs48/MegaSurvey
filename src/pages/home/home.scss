@@ -1,0 +1,23 @@
+page-home {
+    .scroll-content
+    {
+background-color: #eeee;
+    }
+.item-select
+{
+    background-color: #ffffd9!important;
+}
+.text-input
+{
+    background-color: #ffffd9!important;
+}
+ion-input {
+  input {
+    text-align: right!important;
+    /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
+    ::-webkit-input-placeholder {
+      text-align: right!important;
+    }
+  }
+}
+}

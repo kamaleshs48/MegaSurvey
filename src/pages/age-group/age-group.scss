@@ -1,0 +1,24 @@
+page-age-group {
+    .item-block
+    {
+        background-color: #ffffB9;
+        color:  #ffff;
+    }
+    .item-block h1{
+        color: red;
+    }
+    .item-block h2{
+        color: blue;
+    }
+    .item-radio.item-md ion-label
+    {
+        color: red;
+    }
+    .img1  {
+        width:100% !important;
+        height : 100% !important;
+        max-width: 100px !important;  //any size
+        max-height: 100px !important; //any size
+        margin-left: -14px!important;
+        }
+}

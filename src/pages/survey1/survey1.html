@@ -1,0 +1,110 @@
+<!--
+  Generated template for the Survey1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title>Your Vote Please ....
+
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">SKIP</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <!-- <button ion-button color="secondary" outer (click)="BindPartiList()">Load Data</button> -->
+    <ion-card *ngFor="let k of PartyList; let i=index">
+      <ion-item (click)="SaveSurvey(k.ID,k.Survey_ID,k.PersonID,k.PartyName)" class="k" [ngStyle]="{'height': height}" *ngIf="k.Survey_Type_ID==1 || k.Survey_Type_ID==2">
+
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height,'width': height}">
+          <img src="{{k.IconsName}}" class="img1" />
+        </ion-avatar>
+        <h1 center text-wrap center style="color:red">{{k.PartyName}}</h1>
+        <h1 center text-wrap center style="color:black">{{k.HindiName}}</h1>
+      </ion-item>
+      <ion-item (click)="SaveSurvey(k.ID,k.Survey_ID,k.PersonID,k.PersonName)" class="k" [ngStyle]="{'height': height}"  *ngIf="k.Survey_Type_ID==3">
+
+        <ion-avatar item-start style="width:20%!important;" [ngStyle]="{'height': height,'width': height}">
+          <img src="{{k.IconsName}}" class="img1" />
+        </ion-avatar>
+        <h1 center text-wrap center style="color:red">{{k.PartyName}}</h1>
+        <h1 center text-wrap center style="color:black">{{k.PersonName}}</h1>
+        <ion-avatar item-end style="width:20%!important;margin-right: 0px" [ngStyle]="{'height': height,'width': height}">
+          <img src="{{k.PersonImage}}" class="img2" />
+        </ion-avatar>
+      </ion-item>
+
+
+
+
+    </ion-card>
+
+
+
+    <!--  <ion-card>
+      <ion-item (click)="BJP()" class="k" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height}">
+          <img src="assets/img/congress.png" class="img1" />
+        </ion-avatar>
+        <h1 center text-wrap center style="color:red">Bhartiy Janta Party</h1>
+        <h1 center text-wrap center style="color:blue">भारती जनता पार्टी</h1>
+        <ion-avatar item-end style="width:20%!important;margin-right: 0px" [ngStyle]="{'height': height,'width': height}">
+          <img src="assets/img/congress.png" class="img2" />
+        </ion-avatar>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item (click)="BJP()" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height,'width': height}">
+          <img src="assets/img/congress.png" />
+        </ion-avatar>
+        <b center style="color:red">Bhartiy Janta Party</b>
+
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item (click)="BJP()" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height}">
+          <img src="assets/img/congress.png" />
+        </ion-avatar>
+        <b center style="color:red">Bhartiy Janta Party</b>
+
+
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item (click)="BJP()" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height}">
+          <img src="assets/img/1.png" />
+        </ion-avatar>
+        <b center style="color:red">Other</b>
+
+      </ion-item>zz
+    </ion-card>
+    <ion-card>
+      <ion-item (click)="BJP()" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height}">
+          <img src="assets/img/1.png" />
+        </ion-avatar>
+        <b center style="color:red">Nota</b>
+
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item (click)="BJP()" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:25%!important;" [ngStyle]="{'height': height}">
+          <img src="assets/img/1.png" />
+        </ion-avatar>
+        <b center style="color:red">Nota</b>
+
+      </ion-item>
+    </ion-card> -->
+  </ion-list>
+
+</ion-content>

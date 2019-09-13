@@ -1,0 +1,34 @@
+<!--
+  Generated template for the GenderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="header">
+
+  <ion-navbar color="header">
+    <ion-title>Your Age Group Please ...</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">SKIP</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let k of _List; let i=index">
+      <ion-item (click)="SaveGender(k.value,k.text)" [ngStyle]="{'height': height}">
+        <ion-avatar item-start style="width:20%!important;" [ngStyle]="{'height': height,'width': height}">
+          <img [src]="k.IconsName" class="img1" />
+        </ion-avatar>
+        <h1 center text-wrap center style="color:red">{{k.text}}</h1>
+        <h1 center text-wrap center style="color:black">{{k.OtherLanguage}}</h1>
+      </ion-item>
+    </ion-card>
+
+  </ion-list>
+
+
+
+
+
+</ion-content>

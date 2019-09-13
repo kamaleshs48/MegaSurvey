@@ -1,0 +1,34 @@
+page-questionnaire {
+    .item-block
+    {
+        background-color: #CCFFCC;
+        color: red;
+       
+    }
+    .item-block h3{
+        text-align: justify!important;;
+        text-justify: inter-word;
+    }
+    .item-block h1{
+        color: red;
+        text-align: center!important;
+    }
+    .item-block h2{
+        color: red;
+        font-size: 155%;
+        text-align: center!important;
+    }
+    .ion-label
+    {
+        text-align: center!important;
+    }
+    .c1
+    {
+        padding-bottom: 0px!important;
+    }
+    .hr {
+        border-bottom: 1px solid blue!important;
+        margin: 1px 0;
+        width: 100%;
+      }
+}

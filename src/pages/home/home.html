@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title>Select</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>State</ion-label>
+      <ion-select [disabled]="StateID" [(ngModel)]="S.StateID" (ngModelChange)="BindLokSabha1(S.StateID)"
+        [selectOptions]="selectOptions">
+        <ion-option [value]="gl.ID" *ngFor="let gl of StateList">{{gl.Name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Lok Sabha</ion-label>
+      <ion-select [disabled]="LokSabhaID" [(ngModel)]="S.LokSabhaID" (ngModelChange)="BindVidhanSabha1(S.LokSabhaID)"
+        [selectOptions]="selectOptions">
+        <ion-option [value]="gl.ID" *ngFor="let gl of LokSabhaList">{{gl.Name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Vidhan Sabha</ion-label>
+      <ion-select [disabled]="VidhanSabhaID" [(ngModel)]="S.VidhanSabhaID" (ngModelChange)="BindWord1(S.VidhanSabhaID)"
+        [selectOptions]="selectOptions">
+        <ion-option [value]="gl.ID" *ngFor="let gl of VidhanSabhList">{{gl.Name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>{{WardLevelName}}</ion-label>
+      <ion-select [(ngModel)]="S.WordID" (ngModelChange)="BindArea1(S.WordID)" [selectOptions]="selectOptions">
+        <ion-option [value]="gl.ID" *ngFor="let gl of WordList">{{gl.Name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Area</ion-label>
+      <ion-select (ngModelChange)="BindBooth(S.AreaID)" [(ngModel)]="S.AreaID" [selectOptions]="selectOptions">
+        <ion-option [value]="gl.ID" *ngFor="let gl of AreaList">{{gl.Name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item style="background: #ffffd9!important">
+      <ion-label>Enter Area</ion-label>
+      <ion-input type="text" [(ngModel)]="S.AreaOther" name="AreaOther" [disabled]="S.AreaID!=99999"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  
+  <ion-card>
+    <ion-item style="background: #ffffd9!important">
+      <ion-label>Street</ion-label>
+      <ion-input type="text" [(ngModel)]="S.Street" name="Street" maxlength="30"></ion-input>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-item style="background: #ffffd9!important">
+      <ion-label>Booth No</ion-label>
+
+      <ion-input type="tel"  maxlength="3"  [(ngModel)]="S.BoothID" name="BoothID" ></ion-input>
+
+
+     <!--  <ion-select [(ngModel)]="S.BoothID" [selectOptions]="selectOptions">
+        <ion-option [value]="gl.ID" *ngFor="let gl of BoothList">{{gl.Name}}</ion-option>
+      </ion-select> -->
+    </ion-item>
+  </ion-card>
+
+
+
+  <!--   <ion-card>
+    <ion-item>
+
+  <ion-label>Gender</ion-label>
+  <ion-select [selectOptions]="selectOptions">
+    <ion-option value="f">Female</ion-option>
+    <ion-option value="m">Male</ion-option>
+  </ion-select>
+</ion-item>
+</ion-card> -->
+  <div padding>
+    <div style="padding-left: 30%">
+      <button ion-button color="primary" (click)="Next()" style="width: 50%;">Next</button>
+    </div>
+
+  </div>
+
+
+</ion-content>
